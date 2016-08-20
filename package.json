@@ -1,0 +1,26 @@
+{
+  "name": "forececlosures_crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul0716/ForeclosuresCrawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paul0716/ForeclosuresCrawler/issues"
+  },
+  "homepage": "https://github.com/Paul0716/ForeclosuresCrawler#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "firebase": "^3.3.0",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
+    "requests": "^0.1.7"
+  }
+}
