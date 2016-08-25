@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/Paul0716/ForeclosuresCrawler#readme",
   "dependencies": {
+    "Q": "0.0.1",
+    "bufferhelper": "^0.2.1",
     "cheerio": "^0.20.0",
     "firebase": "^3.3.0",
+    "iconv-lite": "^0.4.13",
+    "moment": "^2.14.1",
+    "q": "^1.4.1",
     "request": "^2.74.0",
     "request-promise": "^4.1.1",
     "requests": "^0.1.7"
