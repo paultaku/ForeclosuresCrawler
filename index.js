@@ -69,6 +69,8 @@ function recursivePageSave(result, pageNow){
 				court_index++;
 				if( !checkIfFinished(court_index) ){
 					StartSingleCourtScratch(court_index);
+				}else{
+					process.exit(0);
 				}
 				return;
 			} else{

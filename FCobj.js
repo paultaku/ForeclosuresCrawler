@@ -56,6 +56,7 @@ function FCobj(){
 		.then(function($){
 			var form_Array = $("form[name ='form']").serializeArray();
 			var form_data = self.ArrToObj(form_Array);
+			self.removeData(form_data);
 			deferred.resolve(form_data);
 		}, function(error){
 			deferred.reject(error);
@@ -68,8 +69,21 @@ function FCobj(){
 		return iconv.decode(string.replace(/\r/g,'').replace(/ /g,'').replace(/\n/g,'').replace(/\t/g,''),'Big5');
 	}
 
+	this.removeData = function(data){
+		var rowRef = ref.child('data/'+data.courtX);
+		rowRef
+			.remove()
+			.then(function() {
+				console.log("Remove succeeded.")
+			})
+			.catch(function(error) {
+				console.log("Remove failed: " + error.message)
+			});
+	}
+
 	this.pushData = function($, data){
-		var rowRef = ref.child('data/'+today+'/'+data.courtX);
+
+		var rowRef = ref.child('data/'+data.courtX);
 		var rows = $("form[name ='form'] table table tr").slice(1,-2);
 
 		rows.each(function(i,el){	
